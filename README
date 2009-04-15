@@ -1,0 +1,10 @@
+Tripwire is a simple tool for watching a set of files/folders for changes
+and then triggering a shell command to execute when a change occurs.
+
+It was written because I love the concepts behind autotest and rstakeout
+but the difference is that it will watch for the addition of files and
+subfolders where those tools only seemed to register a set of files at
+startup and never seemed to pick up on when you created new ones.
+
+Tripwire uses very simple Dir.glob-ing
+

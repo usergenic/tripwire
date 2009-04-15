@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby -w
+
+me = __FILE__
+me = File.readlink(me) while(File.symlink?(me))
+require File.expand_path(File.join(File.dirname(me), "..", "lib","tripwire"))
+require 'tripwire/cli'
+
+Tripwire::CLI.new(ARGV)
