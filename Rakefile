@@ -11,7 +11,7 @@ end
 
 desc "Generates the tripwire.gemspec file"
 task :gemspec do
-  system("rake debug_gem > tripwire.gemspec")
+  system("rake debug_gem | grep -v '(in ' > tripwire.gemspec")
 end
 
 # vim: syntax=Ruby

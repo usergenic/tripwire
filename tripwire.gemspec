@@ -1,4 +1,3 @@
-(in /Users/bbaldwin/src/opensource/tripwire)
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
