@@ -5,3 +5,4 @@ module Tripwire
 end
 
 require 'tripwire/scanner'
+

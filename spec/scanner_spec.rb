@@ -72,3 +72,4 @@ describe "A Tripwire Scanner" do
   end
 
 end
+

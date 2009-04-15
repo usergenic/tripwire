@@ -3,6 +3,8 @@ require 'tripwire/runner'
 
 module Tripwire
   class CLI
+
+    private
     
     def initialize(args)
       scanner = Tripwire::Scanner.new
