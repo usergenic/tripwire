@@ -8,9 +8,10 @@ module Tripwire
     def run!
       raise "No command specified.  Please specify a command to run." if !command
       raise "No files/folders specified.  Please specify files/patterns to scan." if scanner.scan_patterns.empty?
+      scanner.scan # do this because we don't care about the initial updates collection
       loop do
-        system(command) unless scanner.scan.empty?
         sleep delay
+        system(command) unless scanner.scan.empty?
       end  
     end
     
