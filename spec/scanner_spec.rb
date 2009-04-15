@@ -15,6 +15,7 @@ describe "A Tripwire Scanner" do
   before :each do
     clear_temp_folder
     self.scanner = Tripwire::Scanner.new
+    scanner.quiet = true
     scanner.scan_patterns << "#{temp}/**/*"
   end
   

@@ -5,7 +5,7 @@ module Tripwire
     attr_accessor :scanned_files
     attr_accessor :scanned_file_mtimes
     attr_accessor :updates
-    attr_accessor :verbose
+    attr_accessor :quiet
 
     def scan
       updates.clear
@@ -35,7 +35,7 @@ module Tripwire
         updates << "D #{file}"
       end
       self.scanned_files.replace(files)
-      puts updates if verbose
+      puts updates unless quiet
       updates
     end
     
@@ -51,7 +51,7 @@ module Tripwire
       self.scanned_files = []
       self.scanned_file_mtimes = {}
       self.updates = []
-      self.verbose = false
+      self.quiet = false
     end
     
   end

@@ -18,8 +18,8 @@ module Tripwire
         opt.on("-d","--delay <seconds>", Integer, "number of seconds between each scan (defaults to 1)") do |d|
           delay = d
         end
-        opt.on("-v","--verbose", "outputs changes as they are discovered") do
-          scanner.verbose = true
+        opt.on("-q","--quiet", "suppresses output") do
+          scanner.quiet = true
         end
         opt.on("-n","--non-recursive", "tells tripwire *not* to scan folders recursively") do
           recursive = false
