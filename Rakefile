@@ -1,10 +1,13 @@
-root_folder = File.dirname(__FILE__)
-$: << "#{root_folder}/lib"
+# -*- ruby -*-
 
-require 'spec/rake/spectask'
-Spec::Rake::SpecTask.new do |t|
-  t.warning = true
-  t.spec_opts = ['--options', "\"#{root_folder}/spec/spec.opts\""]
-  t.rcov = false
-  t.spec_files = FileList['spec/**/*_spec.rb']
+require 'rubygems'
+require 'hoe'
+require './lib/tripwire.rb'
+
+Hoe.new('tripwire', Tripwire::VERSION) do |p|
+  # p.rubyforge_name = 'tripwirex' # if different than lowercase project name
+  p.developer('Brendan Baldwin', 'brendan@usergenic.com')
 end
+
+# vim: syntax=Ruby
+

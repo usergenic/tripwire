@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby -w
+#!/usr/bin/env ruby
 
 me = __FILE__
 me = File.readlink(me) while(File.symlink?(me))
