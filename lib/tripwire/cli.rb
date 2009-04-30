@@ -7,6 +7,12 @@ module Tripwire
     private
     
     def initialize(args)
+      
+      trap('INT') do
+        puts "\nQuitting..."
+        exit
+      end
+      
       scanner = Tripwire::Scanner.new
       recursive = true
       delay = 1
