@@ -28,7 +28,9 @@ Tripwire uses very simple Dir.glob-ing
 
 == INSTALL:
 
-  sudo gem install brendan-tripwire
+The gem is hosted on gemcutter.org, so you should only have to type:
+
+  sudo gem install tripwire
 
 == LICENSE:
 
