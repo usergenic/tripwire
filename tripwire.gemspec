@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
      "Manifest.txt",
      "README.txt",
      "Rakefile",
+     "VERSION",
      "bin/tripwire",
      "lib/tripwire.rb",
      "lib/tripwire/cli.rb",
