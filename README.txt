@@ -32,6 +32,12 @@ The gem is hosted on gemcutter.org, so you should only have to type:
 
   sudo gem install tripwire
 
+== CONTRIBUTORS:
+
+Brendan Baldwin (author), Matthew Fallshaw (integrate Sven Schwyn's fsevent
+magic, default FILESPEC, interrupt once to trip), Sven Schwyn (silently had his
+code pinched)
+
 == LICENSE:
 
 (The MIT License)

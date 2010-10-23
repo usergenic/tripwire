@@ -1,5 +1,7 @@
 module Tripwire
   class Runner
+
+	GEM_PATH = File.expand_path(File.join(File.dirname(__FILE__), '..', '..'))
     
     attr_accessor :scanner
     attr_accessor :command
@@ -13,7 +15,11 @@ module Tripwire
       scanner.scan # do this because we don't care about the initial updates collection
       scanner.quiet = original_quiet
       loop do
-        sleep delay
+        begin
+          `cd '#{Dir.pwd}'; #{File.join(GEM_PATH, 'bin', 'fsevent_sleep')} . 2>&1`
+        rescue
+          sleep delay
+        end
         system(command) unless scanner.scan.empty?
       end  
     end
