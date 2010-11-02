@@ -8,7 +8,7 @@ begin
     gem.description = "Similar to rstakeout and autotest except more options"
     gem.email = "brendan@usergenic.com"
     gem.homepage = "http://github.com/brendan/tripwire"
-    gem.authors = ["Brendan Baldwin"]
+    gem.authors = ["Brendan Baldwin", "Matthew Fallshaw", "Sven Schwyn"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
   end
   Jeweler::GemcutterTasks.new
